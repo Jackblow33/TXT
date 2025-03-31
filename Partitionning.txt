@@ -4,7 +4,7 @@
 
 #Debian || Arch script
 
-#Might need yo install os-prober first
+#install os-prober and uncomment to detect and include other operating systems
 #os-prober is a package that detects other OSes available on a system and outputs the results in a generic machine-readable format
 sudo apt install os-prober || sudo pacman -Su os-prober
 
