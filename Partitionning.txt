@@ -1,6 +1,11 @@
 #https://www.youtube.com/watch?v=Crleyglb4mo
 
 
+#Might need yo install os-prober first
+#os-prober is a package that detects other OSes available on a system and outputs the results in a generic machine-readable format
+sudo apt install os-prober || sudo pacman -Su os-prober
+
+
 sudo nano  /etc/default/grub
 
 #uncomment following line to enable it:
