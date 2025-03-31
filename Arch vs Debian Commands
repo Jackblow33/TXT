@@ -1,0 +1,33 @@
+#Usefull commands Arch system vs Debian
+#Source https://www.youtube.com/watch?v=-dEuXTMzRKs&t=247s
+#Source https://wiki.archlinux.org/title/Pacman
+
+#To update Arch based system or Debian
+sudo pacman -Syu || sudo apt update && sudo apt upgrade
+sudo pacman -Syy || sudo apt update
+#This will download and install the latest available updates for all programs
+#Syu: This tells pacman to: -S(synchronize)   u(Upgrade)     y(auto yes)
+
+#To install packages: pacman or Debian
+#The safest way to install packages is:
+#Identify them with pacman -Ss <pkg text>
+#Install with sudo pacman -Syu <pkg name> Example:
+sudo pacman -Syu firefox || sudo apt install firefox-esr
+
+#To remove packages: pacman
+# -R = remove and will remove only the packages specified. Any dependencies that were only used by the packages you are uninstalling will be left behind.
+# -Rns will remove the specified packages, config files and any dependencies that will become unused after removal
+sudo pacman -Rns vim  || sudo apt purge vim && sudo apt autoremove      #remove the specified package, config files and any dependencies that will become unused after removal
+sudo pacman -Rs vim  || sudo apt remove                                 #remove the specified package and any dependencies that will become unused after removal
+sudo pacman -R vim  || sudo apt remove vim                              #remove the specified package
+# -Rns: This tells pacman to: -R(remove)   n(remove config files)    s(remove unused dependencies)
+
+
+pacman -Q  || apt list --installed              # #List all packages installed on the system
+pacman -Q | wc -l || dpkg -l | grep -c '^ii'    #total numbers of packages installed on the system
+pacman -Qe | wc -l   || apt-mark showmanual     #numbers of packages installed by user on the system
+pacman -Qdt                                     #list of no longer needed dependencies
+pacman -Sc                                      #remove old packages from cache directory /var/cache/pacman/pkg/
+
+#For more infos
+man pacman

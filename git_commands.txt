@@ -1,0 +1,16 @@
+
+#Create new repo
+echo "# cachyospostinstall" >> README.md
+git init
+git add .
+#git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Jackblow33/cachyospostinstall.git
+git push -u origin main
+
+
+#push an existing repository
+git remote add origin https://github.com/Jackblow33/cachyospostinstall.git
+git branch -M main
+git push -u origin main

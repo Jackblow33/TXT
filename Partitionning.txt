@@ -1,0 +1,9 @@
+#https://www.youtube.com/watch?v=Crleyglb4mo
+
+
+sudo nano  /etc/default/grub
+
+#uncomment following line to enable it:
+#GRUB_DISABLE_OS_PROBER=false
+
+sudo update-grub || sudo grub-mkconfig -o /boot/grub/grub.cfg    #Debian || Arch
