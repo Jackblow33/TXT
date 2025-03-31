@@ -1,5 +1,8 @@
-#https://www.youtube.com/watch?v=Crleyglb4mo
 
+
+#Video https://www.youtube.com/watch?v=Crleyglb4mo
+
+#Debian || Arch script
 
 #Might need yo install os-prober first
 #os-prober is a package that detects other OSes available on a system and outputs the results in a generic machine-readable format
@@ -11,4 +14,4 @@ sudo nano  /etc/default/grub
 #uncomment following line to enable it:
 #GRUB_DISABLE_OS_PROBER=false
 
-sudo update-grub || sudo grub-mkconfig -o /boot/grub/grub.cfg    #Debian || Arch
+sudo update-grub || sudo grub-mkconfig -o /boot/grub/grub.cfg    
