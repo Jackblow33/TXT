@@ -15,3 +15,5 @@ sudo nano  /etc/default/grub
 #GRUB_DISABLE_OS_PROBER=false
 
 sudo update-grub || sudo grub-mkconfig -o /boot/grub/grub.cfg    
+
+# Gparted https://www.youtube.com/watch?v=I7jwQrwPkyY
